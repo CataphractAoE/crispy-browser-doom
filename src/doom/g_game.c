@@ -2192,13 +2192,13 @@ void G_DoNewGame (void)
 {
     demoplayback = false; 
     netdemo = false;
-    netgame = false;
+    netgame = true;
     deathmatch = false;
     playeringame[1] = playeringame[2] = playeringame[3] = 0;
     // [crispy] do not reset -respawn, -fast and -nomonsters parameters
     /*
     respawnparm = false;
-    fastparm = false;
+    fastparm = true;
     nomonsters = false;
     */
     consoleplayer = 0;
@@ -2301,7 +2301,7 @@ G_InitNew
     M_ClearRandom ();
 
     if (skill == sk_nightmare || respawnparm )
-	respawnmonsters = false;
+	respawnmonsters = true;
     else
 	respawnmonsters = false;
 
